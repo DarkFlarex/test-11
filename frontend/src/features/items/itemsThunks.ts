@@ -1,9 +1,15 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {GlobalError, ItemMutation} from "../../types";
+import {GlobalError, Item, ItemMutation} from "../../types";
 import {RootState} from "../../app/store";
 import axiosApi from "../../axiosApi";
 import {isAxiosError} from "axios";
 
+export const fetchItems = createAsyncThunk<Item[],string | undefined>(
+    'items/fetchAll',
+    async (categoryId) => {
+        const { data: items } = await axiosApi.get<Item[]>(`/items`,{params: {category: categoryId}});
+        return items;
+    });
 
 export const createItem = createAsyncThunk<void, ItemMutation, { rejectValue: GlobalError; state: RootState }>(
     'items/create',

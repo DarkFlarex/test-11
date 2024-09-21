@@ -44,3 +44,12 @@ export interface ItemMutation{
     image:string;
     price: string;
 }
+
+export interface Item {
+    _id: string;
+    category: string;
+    title: string;
+    description: string;
+    image: string;
+    price: number;
+}
