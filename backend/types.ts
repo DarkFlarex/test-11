@@ -1,4 +1,4 @@
-import {Model} from "mongoose";
+import {Model, Types} from "mongoose";
 
 export interface UserFields {
     username: string;
@@ -14,3 +14,11 @@ export interface UserMethods {
 }
 
 export type UserModel = Model<UserFields, {}, UserMethods>;
+
+export interface ItemMutation{
+    category:string;
+    title:string;
+    description:string;
+    image:string;
+    price:number;
+}
