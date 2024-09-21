@@ -16,6 +16,7 @@ export interface UserMethods {
 export type UserModel = Model<UserFields, {}, UserMethods>;
 
 export interface ItemMutation{
+    user: string;
     category:string;
     title:string;
     description:string;
