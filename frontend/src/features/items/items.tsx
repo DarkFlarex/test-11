@@ -6,7 +6,7 @@ import {useEffect} from "react";
 import {fetchCategories} from "../categories/categoriesThunks";
 
 
-const Products = () => {
+const Items = () => {
     const dispatch = useAppDispatch();
     const categories = useAppSelector(selectCategories);
 
@@ -30,4 +30,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Items;
