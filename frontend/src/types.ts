@@ -47,7 +47,11 @@ export interface ItemMutation{
 
 export interface Item {
     _id: string;
-    category: string;
+    user: string;
+    category: {
+        _id: string;
+        title: string;
+    };
     title: string;
     description: string;
     image: string;
