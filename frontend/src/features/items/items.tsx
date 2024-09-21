@@ -7,7 +7,7 @@ import {fetchCategories} from "../categories/categoriesThunks";
 import {selectItems, selectItemsFetching} from "./itemsSlice";
 import {useParams} from "react-router-dom";
 import {fetchItems} from "./itemsThunks";
-import Itemitem from "./components/Itemitem";
+import ItemCard from "./components/ItemCard";
 
 
 const Items = () => {
@@ -28,7 +28,7 @@ const Items = () => {
         content = <CircularProgress/>;
     } else if (items.length > 0) {
         content = items.map((item) => (
-            <Itemitem
+            <ItemCard
                 key={item._id}
                 _id={item._id}
                 title={item.title}

@@ -20,7 +20,7 @@ interface Props {
     image: string;
 }
 
-const Itemitem: React.FC<Props> = ({ _id, title, price, image }) => {
+const ItemCard: React.FC<Props> = ({ _id, title, price, image }) => {
     let cardImage;
 
     if (image) {
@@ -43,4 +43,4 @@ const Itemitem: React.FC<Props> = ({ _id, title, price, image }) => {
     );
 };
 
-export default Itemitem;
+export default ItemCard;

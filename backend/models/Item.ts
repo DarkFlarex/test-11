@@ -2,7 +2,6 @@ import mongoose, {Types} from "mongoose";
 import Category from "./Category";
 import User from "./User";
 
-
 const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
