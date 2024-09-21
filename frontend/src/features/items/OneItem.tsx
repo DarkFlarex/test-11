@@ -44,9 +44,9 @@ const OneItem = () => {
                 <Button variant="text" startIcon={<ArrowBackIcon/>} component={Link} to={'/'}>
                     Back to products
                 </Button>
-                {user && item?.user === user._id && (
+                {user && item?.user._id === user._id && (
                     <IconButton aria-label="delete" onClick={handleDelete}>
-                        Delete <DeleteIcon fontSize="inherit" />
+                        <DeleteIcon fontSize="inherit" />
                     </IconButton>
                 )}
 
@@ -70,6 +70,9 @@ const OneItem = () => {
                     <Grid item component={Typography} variant="h6">
                         Category: {item.category.title}
                     </Grid>
+                    <Grid > Seller: {item.user.displayName}</Grid>
+
+                    <Grid >   Phone: {item.user.phoneNumber}</Grid>
                     <Grid item component={Typography} variant="h6">
                         <ImageCardMedia image={cardImage} title={item.title}/>
                     </Grid>

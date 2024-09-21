@@ -47,7 +47,11 @@ export interface ItemMutation{
 
 export interface Item {
     _id: string;
-    user: string;
+    user: {
+        _id: string;
+        displayName: string;
+        phoneNumber: string;
+    };
     category: {
         _id: string;
         title: string;
