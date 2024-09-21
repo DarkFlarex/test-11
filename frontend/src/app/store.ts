@@ -2,6 +2,7 @@ import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import storage from "redux-persist/lib/storage";
 import { persistReducer, FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore } from 'redux-persist';
 import {usersReducer} from "../features/users/usersSlice";
+import {categoriesReducer} from "../features/categories/categoriesSlice";
 
 const usersPersistConfig = {
   key: 'Lalafo:users',
@@ -10,6 +11,7 @@ const usersPersistConfig = {
 };
 
 const rootReducer = combineReducers({
+  categories:categoriesReducer,
   users: persistReducer(usersPersistConfig, usersReducer),
 });
 

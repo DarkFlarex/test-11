@@ -3,6 +3,7 @@ import {Button, Grid, Typography} from '@mui/material';
 import {User} from "../../types";
 import {logout} from "../../features/users/usersThunks";
 import {useAppDispatch} from "../../app/hooks";
+import {NavLink} from "react-router-dom";
 
 interface  Props {
   user: User;
@@ -21,6 +22,9 @@ const UserMenu:React.FC<Props> = ({user}) => {
               <Typography color="inherit">
                   Hello, {user.username}!
               </Typography>
+          </Grid>
+          <Grid item>
+              <Button component={NavLink} to="/items/new"  color="inherit">Add new items</Button>
           </Grid>
           <Grid item>
               <Button onClick={handleLogout} color="inherit">Logout</Button>
