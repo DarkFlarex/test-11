@@ -106,6 +106,7 @@ const ItemForm: React.FC<Props> = ({ onSubmit, isLoading }) => {
             <Grid item>
                 <TextField
                     required
+                    inputProps={{ min: "0" }}
                     type="number"
                     label="Price"
                     id="price"

@@ -62,18 +62,17 @@ const OneItem = () => {
                         {item.title}
                     </Grid>
                     <Grid item component={Typography} variant="body1">
-                        {item.description}
+                        Description: {item.description}
                     </Grid>
                     <Grid item component={Typography} variant="h6">
                         Price: {item.price} KGS
                     </Grid>
                     <Grid item component={Typography} variant="h6">
-                        <ImageCardMedia image={cardImage} title={item.title}/>
-                    </Grid>
-                    <Grid item component={Typography} variant="h6">
                         Category: {item.category.title}
                     </Grid>
-
+                    <Grid item component={Typography} variant="h6">
+                        <ImageCardMedia image={cardImage} title={item.title}/>
+                    </Grid>
                 </Grid>
             )}
         </Grid>
