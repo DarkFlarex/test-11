@@ -36,3 +36,11 @@ export interface Category {
     _id: string;
     title: string;
 }
+
+export interface ItemMutation{
+    category:string;
+    title:string;
+    description:string;
+    image:string;
+    price: string;
+}

@@ -3,7 +3,8 @@ import AppToolbar from "./UI/AppToolbar/AppToolbar";
 import {Route, Routes} from "react-router-dom";
 import Login from "./features/users/login";
 import Register from "./features/users/Register";
-import Products from "./features/products/products";
+import Items from "./features/items/items";
+import NewItem from "./features/items/NewItem";
 
 const App = () => {
 
@@ -14,10 +15,11 @@ const App = () => {
         </header>
           <Container maxWidth="xl" component="main">
               <Routes>
-                  <Route path="/" element={<Products />} />
+                  <Route path="/" element={<Items />} />
                   <Route path="/register" element={<Register/>}/>
                   <Route path="/login" element={<Login/>}/>
-                  <Route path="/categories/:categoryId" element={<Products />} />
+                  <Route path="/categories/:categoryId" element={<Items />} />
+                  <Route path="/items/new" element={<NewItem />} />
                   <Route path="*" element={<Typography variant="h1">Not found</Typography>}/>
               </Routes>
           </Container>
