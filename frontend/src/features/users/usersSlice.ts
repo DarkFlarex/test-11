@@ -68,8 +68,6 @@ export const {unsetUser} = usersSlice.actions;
 
 export const {
     selectUser,
-    selectRegisterLoading,
     selectRegisterError,
-    selectLoginLoading,
     selectLoginError,
 } = usersSlice.selectors;

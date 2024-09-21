@@ -4,7 +4,7 @@ import { persistReducer, FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, pers
 import {usersReducer} from "../features/users/usersSlice";
 
 const usersPersistConfig = {
-  key: 'forum:users',
+  key: 'Lalafo:users',
   storage,
   whitelist: ['user']
 };
