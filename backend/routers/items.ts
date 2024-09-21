@@ -25,7 +25,7 @@ itemsRouter.get('/', async (req, res, next) => {
 
 itemsRouter.get('/:id', async (req, res, next) => {
     try {
-        const item = await Item.findById(req.params.id);
+        const item = await Item.findById(req.params.id).populate('category', 'title');
 
         if (item === null) {
             return res.status(404).send({ error: 'Item not found' });
