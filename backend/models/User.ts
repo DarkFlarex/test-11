@@ -32,7 +32,15 @@ const UserSchema
     token:{
         type: String,
         required: true,
-    }
+    },
+    displayName:{
+        type: String,
+        required: true,
+    },
+    phoneNumber:{
+        type: String,
+        required: true,
+    },
 });
 
 UserSchema.methods.checkPassword = function(password) {

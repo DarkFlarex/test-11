@@ -19,7 +19,7 @@ const config = {
   rootPath,
   publicPath: path.join(rootPath, 'public'),
   corsOptions,
-  database:'mongodb://localhost/forum'
+  database:'mongodb://localhost/Lalafo'
 };
 
 export default config;

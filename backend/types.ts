@@ -4,6 +4,8 @@ export interface UserFields {
     username: string;
     password: string;
     token:string;
+    phoneNumber:string;
+    displayName:string;
 }
 
 export interface UserMethods {
