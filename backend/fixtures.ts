@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import config from "./config";
 import User from "./models/User";
+import Category from "./models/Category";
 
 const run = async () => {
     await mongoose.connect(config.database);
@@ -8,6 +9,8 @@ const run = async () => {
 
     try {
         await db.dropCollection('users');
+        await db.dropCollection('categories');
+
     } catch (e) {
         console.log('Skipping drop...');
     }
@@ -31,6 +34,16 @@ const run = async () => {
 
     await user1.save();
     await user2.save();
+
+    const [
+        ComputersCategory,
+        CarsCategory,
+        PhoneCategory]
+        = await Category.create([
+        { title: 'Computers' },
+        { title: 'Cars' },
+        { title: 'Phones' }
+    ]);
 
 
     await db.close();
